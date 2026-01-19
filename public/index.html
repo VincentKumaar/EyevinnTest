@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Maker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero">
+        <h1>Menu Maker</h1>
+        <p>Create your custom menu and store it in your personal database.</p>
+      </section>
+
+      <section class="card">
+        <h2>Build your menu</h2>
+        <form id="menu-form">
+          <label class="field">
+            <span>Appetizer</span>
+            <input type="text" name="appetizer" placeholder="Bruschetta" required />
+          </label>
+          <label class="field">
+            <span>Main dish</span>
+            <input type="text" name="main" placeholder="Seared salmon" required />
+          </label>
+          <label class="field">
+            <span>Dessert</span>
+            <input type="text" name="dessert" placeholder="Chocolate mousse" required />
+          </label>
+          <button type="submit">Save menu</button>
+        </form>
+      </section>
+
+      <section class="card" aria-live="polite">
+        <h2>Your latest menu</h2>
+        <div id="menu-preview" class="menu-preview">
+          <p class="empty">No menu saved yet. Fill out the form to create one.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
