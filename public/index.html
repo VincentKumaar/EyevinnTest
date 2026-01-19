@@ -17,26 +17,82 @@
         <h2>Build your menu</h2>
         <form id="menu-form">
           <label class="field">
+            <span>Base servings (recipe yield)</span>
+            <input
+              type="number"
+              name="base_servings"
+              min="1"
+              step="1"
+              value="2"
+              required
+            />
+          </label>
+          <label class="field">
             <span>Appetizer</span>
             <input type="text" name="appetizer" placeholder="Bruschetta" required />
+          </label>
+          <label class="field">
+            <span>Appetizer ingredients (per base serving)</span>
+            <textarea
+              name="appetizer_ingredients"
+              rows="4"
+              placeholder="2 slices baguette\n1 tbsp olive oil\n3 tomatoes"
+              required
+            ></textarea>
           </label>
           <label class="field">
             <span>Main dish</span>
             <input type="text" name="main" placeholder="Seared salmon" required />
           </label>
           <label class="field">
+            <span>Main dish ingredients (per base serving)</span>
+            <textarea
+              name="main_ingredients"
+              rows="4"
+              placeholder="150 g salmon\n1 tsp salt\n1 tbsp butter"
+              required
+            ></textarea>
+          </label>
+          <label class="field">
             <span>Dessert</span>
             <input type="text" name="dessert" placeholder="Chocolate mousse" required />
+          </label>
+          <label class="field">
+            <span>Dessert ingredients (per base serving)</span>
+            <textarea
+              name="dessert_ingredients"
+              rows="4"
+              placeholder="1/2 cup cream\n40 g dark chocolate"
+              required
+            ></textarea>
           </label>
           <button type="submit">Save menu</button>
         </form>
       </section>
 
+      <section class="card">
+        <h2>Saved menus</h2>
+        <div id="menu-list" class="menu-list">
+          <p class="empty">No menus saved yet.</p>
+        </div>
+      </section>
+
       <section class="card" aria-live="polite">
-        <h2>Your latest menu</h2>
+        <h2>Menu preview</h2>
+        <div class="controls">
+          <label class="field-inline">
+            <span>People to serve</span>
+            <input type="number" id="servings-input" min="1" step="1" value="2" />
+          </label>
+          <button type="button" id="nutrition-button">Get nutrition</button>
+          <button type="button" id="delete-button" class="danger">
+            Delete menu
+          </button>
+        </div>
         <div id="menu-preview" class="menu-preview">
           <p class="empty">No menu saved yet. Fill out the form to create one.</p>
         </div>
+        <div id="nutrition-preview" class="nutrition-preview"></div>
       </section>
     </main>
 

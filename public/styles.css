@@ -63,6 +63,39 @@ form {
   font-size: 1rem;
 }
 
+.field textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #c9c9d6;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.field-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  color: #22223b;
+}
+
+.field-inline input {
+  width: 90px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #c9c9d6;
+  font-size: 1rem;
+}
+
 button {
   align-self: start;
   border: none;
@@ -78,9 +111,52 @@ button:hover {
   background: #2d3142;
 }
 
+.danger {
+  background: #b02a37;
+}
+
+.danger:hover {
+  background: #8f202c;
+}
+
+.menu-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.menu-list button {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: #f0f1f7;
+  color: #22223b;
+}
+
+.menu-list button.active {
+  background: #2d3142;
+  color: white;
+}
+
+.menu-list .timestamp {
+  font-size: 0.8rem;
+  color: rgba(34, 34, 59, 0.6);
+}
+
+.menu-list button.active .timestamp {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .menu-preview {
   display: grid;
   gap: 0.75rem;
+}
+
+.menu-preview .ingredients {
+  display: grid;
+  gap: 0.35rem;
+  color: #4a4e69;
+  font-size: 0.95rem;
 }
 
 .menu-preview .item {
@@ -97,6 +173,21 @@ button:hover {
 .menu-preview .timestamp {
   font-size: 0.85rem;
   color: #7c7c99;
+}
+
+.nutrition-preview {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ececf5;
+  font-size: 0.95rem;
+  color: #4a4e69;
+}
+
+.nutrition-item {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 12px;
+  background: #f7f7fb;
 }
 
 .empty {
