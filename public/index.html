@@ -4,13 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu Maker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="app">
       <section class="hero">
-        <h1>Menu Maker</h1>
-        <p>Create your custom menu and store it in your personal database.</p>
+        <div class="hero-text">
+          <p class="eyebrow">Tonight's menu board</p>
+          <h1>Menu Maker</h1>
+          <p>Create a three-course menu, scale the servings, and save each meal like a chef's notebook.</p>
+          <div class="hero-tags">
+            <span>Appetizer</span>
+            <span>Main</span>
+            <span>Dessert</span>
+          </div>
+        </div>
+        <div class="hero-plate" aria-hidden="true">
+          <div class="plate">
+            <span class="garnish garnish-1"></span>
+            <span class="garnish garnish-2"></span>
+            <span class="garnish garnish-3"></span>
+          </div>
+          <span class="steam steam-1"></span>
+          <span class="steam steam-2"></span>
+          <span class="steam steam-3"></span>
+        </div>
       </section>
 
       <section class="card">
